@@ -569,61 +569,156 @@
     overflow: hidden;
   }
 
-  /* ── Nobel Prize Visual ── */
-  .visual-nobel {
-    background: linear-gradient(135deg, #1A1410 0%, #2D2419 100%);
-    width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column; gap: 1rem; padding: 2rem;
+  /* ── diabetes prediction Visual ── */
+  .diabetes-visual {
+  width: 100%;
+  min-height: 430px;
+  padding: 42px;
+  background: #20201f;
+  color: #f3efe7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.diabetes-visual__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: #b8b1a5;
+}
+
+.diabetes-visual__label {
+  color: #bd6845;
+}
+
+.diabetes-visual__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  padding: 40px 0;
+}
+
+.accuracy-ring {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      #bd6845 0deg 278deg,
+      #5f5b55 278deg 360deg
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accuracy-ring__inner {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: #20201f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.accuracy-ring__number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.accuracy-ring__text {
+  margin-top: 5px;
+  font-size: 0.56rem;
+  letter-spacing: 0.14em;
+  color: #aaa49b;
+}
+
+.prediction-result {
+  max-width: 220px;
+}
+
+.prediction-result__small {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: #a7a097;
+}
+
+.prediction-result strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.diabetes-visual__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #4e4b47;
+  border-bottom: 1px solid #4e4b47;
+}
+
+.diabetes-visual__metrics div {
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.diabetes-visual__metrics div:not(:last-child) {
+  border-right: 1px solid #4e4b47;
+}
+
+.diabetes-visual__metrics span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.56rem;
+  letter-spacing: 0.17em;
+  color: #9d978f;
+}
+
+.diabetes-visual__metrics strong {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.diabetes-visual__footer {
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  color: #938d85;
+}
+
+@media (max-width: 700px) {
+  .diabetes-visual {
+    min-height: auto;
+    padding: 30px 22px;
   }
 
-  .medal-ring {
-    width: 80px; height: 80px;
-    border: 4px solid #C4622D;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    animation: pulse 3s ease-in-out infinite;
+  .diabetes-visual__center {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .medal-inner {
-    width: 56px; height: 56px;
-    border: 2px solid #D9CDB8;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: #F5F0E8;
+  .prediction-result {
+    text-align: center;
   }
 
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(196,98,45,0.4); }
-    50% { box-shadow: 0 0 0 12px rgba(196,98,45,0); }
+  .diabetes-visual__metrics {
+    grid-template-columns: 1fr;
   }
 
-  .bars-mini {
-    display: flex; align-items: flex-end; gap: 6px; margin-top: 0.5rem;
+  .diabetes-visual__metrics div:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #4e4b47;
   }
-
-  .bar-m {
-    width: 18px;
-    background: var(--rust);
-    opacity: 0.8;
-    border-radius: 2px 2px 0 0;
-    animation: grow 2s ease-out forwards;
-  }
-
-  @keyframes grow {
-    from { height: 0; }
-  }
-
-  .label-mini {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.15em;
-    color: rgba(245,240,232,0.5);
-    text-transform: uppercase;
-    margin-top: 0.5rem;
-  }
+}
 
   /* ── Online Learning Visual ── */
   .visual-online {
@@ -868,8 +963,8 @@
     <div class="project-card fade-in">
       <div class="project-info">
         
-        <p class="project-tag">Exploratory Data Analysis</p>
-        <h3 class="project-title">Diabetes Prediction<br>Machine Learning</h3>
+        <p class="project-tag">Machine Learning Classification</p>
+        <h3 class="project-title">Diabetes Prediction<br>Using Machine Learning</h3>
         <p class="project-desc">
          
           A binary classification project using the PIMA Indians Diabetes dataset to predict whether a patient is diabetic based on diagnostic health measurements.
@@ -896,23 +991,47 @@
         </div>
       </div>
 
-      <div class="project-visual">
-        <div class="visual-nobel">
-          <div class="medal-ring">
-            <div class="medal-inner">★</div>
-          </div>
-          <div class="bars-mini">
-            <div class="bar-m" style="height:20px; animation-delay:0.1s;"></div>
-            <div class="bar-m" style="height:35px; animation-delay:0.2s;"></div>
-            <div class="bar-m" style="height:28px; animation-delay:0.3s;"></div>
-            <div class="bar-m" style="height:50px; animation-delay:0.4s;"></div>
-            <div class="bar-m" style="height:42px; animation-delay:0.5s;"></div>
-            <div class="bar-m" style="height:60px; animation-delay:0.6s;"></div>
-            <div class="bar-m" style="height:55px; animation-delay:0.7s;"></div>
-          </div>
-          <p class="label-mini">Gender participation over decades</p>
-        </div>
+      <div class="diabetes-visual">
+  <div class="diabetes-visual__top">
+    <span class="diabetes-visual__label">MACHINE LEARNING</span>
+    <span class="diabetes-visual__dataset">768 RECORDS</span>
+  </div>
+
+  <div class="diabetes-visual__center">
+    <div class="accuracy-ring">
+      <div class="accuracy-ring__inner">
+        <span class="accuracy-ring__number">77.3%</span>
+        <span class="accuracy-ring__text">TEST ACCURACY</span>
       </div>
+    </div>
+
+    <div class="prediction-result">
+      <span class="prediction-result__small">MODEL OUTPUT</span>
+      <strong>DIABETES<br />PREDICTION</strong>
+    </div>
+  </div>
+
+  <div class="diabetes-visual__metrics">
+    <div>
+      <span>MODEL</span>
+      <strong>LINEAR SVM</strong>
+    </div>
+
+    <div>
+      <span>FEATURES</span>
+      <strong>8 CLINICAL</strong>
+    </div>
+
+    <div>
+      <span>SPLIT</span>
+      <strong>80 / 20</strong>
+    </div>
+  </div>
+
+  <div class="diabetes-visual__footer">
+    PYTHON · SCIKIT-LEARN · STANDARD SCALER
+  </div>
+</div>
     </div>
 
     <!-- PROJECT 2: ONLINE LEARNING -->
@@ -1107,7 +1226,7 @@
           </div>
 
           <a
-            href="YOUR_CERTIFICATE_LINK_HERE"
+            href="https://coursera.org/share/9b86260aa422a9d36b77822535717c5b"
             target="_blank"
             rel="noopener noreferrer"
             class="certificate-link"
@@ -1145,7 +1264,7 @@
           </div>
 
           <a
-            href="YOUR_CERTIFICATE_LINK_HERE"
+            href="https://coursera.org/share/a8b661e6af083a9c0410ec93615c72eb"
             target="_blank"
             rel="noopener noreferrer"
             class="certificate-link"
