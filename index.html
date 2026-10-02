@@ -186,36 +186,53 @@
     color: var(--cream);
   }
 
-  /* ── HERO STATS ── */
-  .hero-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    padding-left: 2rem;
-  }
+ /* ── HERO PROCESS ── */
+.hero-process {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.8rem;
+  padding-left: 2rem;
+}
 
-  .stat-card {
-    border-left: 2px solid var(--rust);
-    padding-left: 1.5rem;
-  }
+.process-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+}
 
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--ink);
-    line-height: 1;
-    margin-bottom: 0.3rem;
-  }
+.process-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--rust);
+  padding-top: 0.45rem;
+  min-width: 2rem;
+}
 
-  .stat-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
+.process-content {
+  border-left: 2px solid var(--rust);
+  padding-left: 1.5rem;
+}
 
+.process-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.process-content p {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
   /* ── SECTIONS ── */
   section {
     padding: 6rem 4rem;
