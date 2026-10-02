@@ -493,8 +493,13 @@
     position: relative;
   }
 
-  .project-card:nth-child(even) .project-info { order: 2; }
-  .project-card:nth-child(even) .project-visual { order: 1; }
+.project-card.reverse .project-info {
+  order: 2;
+}
+
+.project-card.reverse .project-visual {
+  order: 1;
+}
 
   .project-number {
     font-family: 'Playfair Display', serif;
@@ -575,6 +580,240 @@
   }
 
   .project-links { display: flex; gap: 0.8rem; }
+
+  /* ── PROJECT CATEGORY ── */
+
+.project-category {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding-top: 1rem;
+  margin-bottom: -2rem;
+}
+
+.project-category span {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: var(--sand);
+  line-height: 1;
+}
+
+.project-category p {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0;
+}
+
+
+/* ── FEATURED DATATHON ── */
+
+.featured-project {
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid var(--sand);
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.3rem;
+}
+
+.achievement-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  background: var(--rust);
+  color: var(--cream);
+
+  padding: 0.5rem 0.8rem;
+}
+
+.project-context {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+
+/* ── PROJECT SUMMARY ── */
+
+.project-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--sand);
+  border-bottom: 1px solid var(--sand);
+
+  margin: 1.8rem 0;
+}
+
+.project-summary-grid div {
+  padding: 1rem;
+}
+
+.project-summary-grid div:not(:last-child) {
+  border-right: 1px solid var(--sand);
+}
+
+.project-summary-grid span {
+  display: block;
+
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+
+.project-summary-grid strong {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+
+/* ── CONTRIBUTION BLOCK ── */
+
+.contribution-block {
+  margin-top: 1.5rem;
+}
+
+.mini-heading {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.64rem;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--rust);
+  margin-bottom: 0.5rem;
+}
+
+
+/* ── PROJECT IMAGES ── */
+
+.project-visual img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+.datathon-visual,
+.retail-visual {
+  position: relative;
+}
+
+.visual-caption {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.8rem 1rem;
+
+  background: rgba(26, 20, 16, 0.88);
+
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+
+  letter-spacing: 0.12em;
+  color: var(--cream);
+}
+
+
+/* ── OLIST VISUAL ── */
+
+.olist-visual {
+  background:
+    linear-gradient(
+      135deg,
+      #1A1410 0%,
+      #2D2419 100%
+    );
+
+  color: var(--cream);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
+.olist-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.olist-heading span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+.olist-heading small {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.55rem;
+
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.olist-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+.olist-metrics div {
+  border: 1px solid rgba(196, 98, 45, 0.55);
+  padding: 1rem;
+  text-align: center;
+}
+
+.olist-metrics span {
+  display: block;
+
+  font-family: 'DM Mono', monospace;
+  font-size: 0.53rem;
+
+  letter-spacing: 0.1em;
+  color: #9b9186;
+
+  margin-bottom: 0.65rem;
+}
+
+.olist-metrics strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+}
+
+.olist-footer {
+  font-family: 'DM Mono', monospace;
+
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+
+  text-align: center;
+  color: #8d847a;
+}
 
   .project-visual {
     background: var(--sand);
@@ -713,6 +952,32 @@
 }
 
 @media (max-width: 700px) {
+  .project-summary-grid {
+  grid-template-columns: 1fr;
+}
+
+.project-summary-grid div:not(:last-child) {
+  border-right: none;
+  border-bottom: 1px solid var(--sand);
+}
+
+.featured-project {
+  padding: 1.5rem;
+}
+
+.olist-metrics {
+  grid-template-columns: 1fr;
+}
+
+.olist-heading {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.visual-caption {
+  flex-direction: column;
+  gap: 0.3rem;
+}
   .diabetes-visual {
     min-height: auto;
     padding: 30px 22px;
@@ -983,218 +1248,565 @@
 
 <!-- ── PROJECTS ───────────────────────────────────── -->
 <section id="projects">
+
   <p class="section-label">Selected Projects</p>
-  <h2>What I've built<br>so far.</h2>
+
+  <h2>
+    From real-world data<br>
+    to meaningful outcomes.
+  </h2>
 
   <div class="projects-area">
 
-    <!-- PROJECT 1: Diabetes Prediction Using Machine Learning -->
-    <div class="project-card fade-in">
+
+    <!-- ═══════════════════════════════════════════════
+         01 — FEATURED CASE STUDY / DATATHON
+    ═══════════════════════════════════════════════ -->
+
+    <div class="project-category">
+      <span>01</span>
+      <p>Featured Case Study</p>
+    </div>
+
+    <article class="project-card featured-project fade-in">
+
       <div class="project-info">
-        
-        <p class="project-tag">Machine Learning Classification</p>
-        <h3 class="project-title">Diabetes Prediction<br>Using Machine Learning</h3>
-        <p class="project-desc">
-         
-          A binary classification project using the PIMA Indians Diabetes dataset to predict whether a patient is diabetic based on diagnostic health measurements.
+
+        <div class="project-meta">
+          <span class="achievement-badge">3rd Place</span>
+          <span class="project-context">Women in Data Datathon 2026</span>
+        </div>
+
+        <p class="project-tag">
+          Team Project · Data Analysis · Storytelling
         </p>
+
+        <h3 class="project-title">
+          Maternal & Child<br>
+          Nutrition Analysis
+        </h3>
+
+        <p class="project-desc">
+          A collaborative data project exploring maternal and child
+          nutrition outcomes across countries under economic and
+          food-security constraints. Our team placed 3rd in the
+          Women in Data Datathon 2026.
+        </p>
+
+        <div class="project-summary-grid">
+
+          <div>
+            <span>MY ROLE</span>
+            <strong>Data Cleaning & Analysis</strong>
+          </div>
+
+          <div>
+            <span>TEAM</span>
+            <strong>4 Members</strong>
+          </div>
+
+          <div>
+            <span>OUTCOME</span>
+            <strong>3rd Place</strong>
+          </div>
+
+        </div>
+
+        <div class="project-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Pandas</span>
+          <span class="tool-tag">BigQuery</span>
+          <span class="tool-tag">Data Cleaning</span>
+          <span class="tool-tag">HTML/CSS</span>
+          <span class="tool-tag">Video Editing</span>
+          <span class="tool-tag">Data Storytelling</span>
+        </div>
+
+
+        <div class="contribution-block">
+
+          <p class="mini-heading">Data & Analysis</p>
+
+          <ul class="project-insights">
+            <li>
+              Cleaned and standardized nutrition, food security,
+              and healthy diet datasets.
+            </li>
+
+            <li>
+              Aligned country identifiers using M49 and ISO3 codes
+              across multiple data sources.
+            </li>
+
+            <li>
+              Prepared datasets for merging, analysis,
+              and visualization.
+            </li>
+
+            <li>
+              Contributed to the analysis and collaborated with
+              the team on the final project.
+            </li>
+          </ul>
+
+        </div>
+
+
+        <div class="contribution-block">
+
+          <p class="mini-heading">Storytelling & Presentation</p>
+
+          <ul class="project-insights">
+            <li>
+              Created the narrative concept and storyline for
+              “Amina,” an AI-generated character designed to turn
+              the team’s data findings into a human-centered story.
+            </li>
+
+            <li>
+              Edited and produced the final project video,
+              combining narrative, visuals, and analytical findings.
+            </li>
+
+            <li>
+              Built and updated the HTML/CSS website used to
+              present the team’s findings.
+            </li>
+          </ul>
+
+        </div>
+
+
+        <div class="project-links">
+
+          <a
+            href="https://github.com/Daliakram29/NutritionPeer---Women-in-Data-Datathon-2026.git"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            ↗ GitHub Repo
+          </a>
+
+          https://www.youtube.com/watch?v=XmLjIUAc5L0&list=PLSvPZ2ClpsQuGBo2J8YSaQ_i5SiDpGrU5&index=17
+          <a
+            href="#"
+            class="btn btn-outline"
+            target="_blank"
+          >
+            View Presentation
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-visual datathon-visual">
+
+        
+        <img
+          src="2.jpg"
+          alt="Women in Data Datathon presentation featuring the Amina story"
+        >
+
+        <div class="visual-caption">
+          <span>WOMEN IN DATA · 2026</span>
+          <span>3RD PLACE</span>
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- ═══════════════════════════════════════════════
+         02 — RETAIL ANALYTICS
+    ═══════════════════════════════════════════════ -->
+
+    <div class="project-category">
+      <span>02</span>
+      <p>Data Analytics</p>
+    </div>
+
+    <article class="project-card reverse fade-in">
+
+      <div class="project-info">
+
+        <p class="project-tag">
+          End-to-End Retail Analytics
+        </p>
+
+        <h3 class="project-title">
+          Online Retail Customer<br>
+          & Sales Analytics
+        </h3>
+
+        <p class="project-desc">
+          An end-to-end analysis of more than one million retail
+          transactions, focused on sales performance, customer
+          behavior, cancellations, and customer segmentation.
+        </p>
+
+        <div class="project-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Pandas</span>
+          <span class="tool-tag">SQL</span>
+          <span class="tool-tag">RFM Analysis</span>
+          <span class="tool-tag">Customer Analytics</span>
+          <span class="tool-tag">Data Visualization</span>
+        </div>
+
+        <ul class="project-insights">
+
+          <li>
+            Cleaned and structured more than one million
+            retail transaction records.
+          </li>
+
+          <li>
+            Distinguished sales, cancellations, returns,
+            and operational adjustments.
+          </li>
+
+          <li>
+            Analyzed revenue, order behavior, customer activity,
+            and product performance.
+          </li>
+
+          <li>
+            Applied RFM analysis to segment customers based on
+            recency, frequency, and monetary value.
+          </li>
+
+          <li>
+            Developed business KPIs and visualizations to communicate
+            customer and sales patterns.
+          </li>
+
+        </ul>
+
+        <div class="https://github.com/Daliakram29/Online-Retial-.git">
+
+          <!-- ضعي GitHub لما يكون جاهز -->
+          <a
+            href="#"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            ↗ GitHub Repo
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-visual retail-visual">
+
+        <!-- لاحقًا نضع صورة الـ dashboard النهائي -->
+        <img
+          src="retail-dashboard.jpg"
+          alt="Online Retail customer and sales analytics dashboard"
+        >
+
+        <div class="visual-caption">
+          <span>1M+ TRANSACTIONS</span>
+          <span>RFM · CUSTOMER ANALYTICS</span>
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- ═══════════════════════════════════════════════
+         03 — SQL / OLIST
+    ═══════════════════════════════════════════════ -->
+
+    <div class="project-category">
+      <span>03</span>
+      <p>SQL & Business Analytics</p>
+    </div>
+
+    <article class="project-card fade-in">
+
+      <div class="project-info">
+
+        <p class="project-tag">
+          SQL Business Analysis
+        </p>
+
+        <h3 class="project-title">
+          Olist Brazilian E-commerce<br>
+          Data Analysis
+        </h3>
+
+        <p class="project-desc">
+          Analysis of the Olist Brazilian E-commerce dataset using
+          MySQL to answer business questions around revenue,
+          customer orders, delivery performance, product categories,
+          and regional activity.
+        </p>
+
+        <div class="project-tools">
+          <span class="tool-tag">MySQL</span>
+          <span class="tool-tag">Joins</span>
+          <span class="tool-tag">CTEs</span>
+          <span class="tool-tag">Window Functions</span>
+          <span class="tool-tag">Subqueries</span>
+          <span class="tool-tag">Aggregations</span>
+        </div>
+
+        <ul class="project-insights">
+
+          <li>
+            Calculated total revenue and monthly order trends
+            to identify peak trading periods.
+          </li>
+
+          <li>
+            Measured late delivery rates and order status
+            distribution to evaluate fulfilment performance.
+          </li>
+
+          <li>
+            Ranked product categories and cities using
+            SQL window functions.
+          </li>
+
+          <li>
+            Identified states performing above average using
+            subqueries and aggregated revenue analysis.
+          </li>
+
+        </ul>
+
+        <div class="project-links">
+
+          <a
+            href="https://github.com/Daliakram29/-Olist-Brazilian-E-commerce-SQL-Analysis.git"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            ↗ GitHub Repo
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-visual olist-visual">
+
+        <div class="olist-heading">
+          <span>OLIST E-COMMERCE</span>
+          <small>BRAZIL · SQL ANALYSIS</small>
+        </div>
+
+        <div class="olist-metrics">
+
+          <div>
+            <span>TOTAL REVENUE</span>
+            <strong>R$16M+</strong>
+          </div>
+
+          <div>
+            <span>ORDERS</span>
+            <strong>99K+</strong>
+          </div>
+
+          <div>
+            <span>LATE DELIVERY</span>
+            <strong>~8%</strong>
+          </div>
+
+        </div>
+
+        <div class="olist-footer">
+          MYSQL · JOINS · WINDOW FUNCTIONS · SUBQUERIES
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- ═══════════════════════════════════════════════
+         04 — MACHINE LEARNING
+    ═══════════════════════════════════════════════ -->
+
+    <div class="project-category">
+      <span>04</span>
+      <p>Machine Learning</p>
+    </div>
+
+    <article class="project-card reverse fade-in">
+
+      <div class="project-info">
+
+        <p class="project-tag">
+          Machine Learning Classification
+        </p>
+
+        <h3 class="project-title">
+          Diabetes Prediction<br>
+          Using Machine Learning
+        </h3>
+
+        <p class="project-desc">
+          A binary classification project using the PIMA Indians
+          Diabetes dataset to predict diabetes risk from eight
+          diagnostic health measurements.
+        </p>
+
         <div class="project-tools">
           <span class="tool-tag">Python</span>
           <span class="tool-tag">Pandas</span>
           <span class="tool-tag">NumPy</span>
           <span class="tool-tag">Scikit-learn</span>
-          <span class="tool-tag">Google Colab</span>
+          <span class="tool-tag">SVM</span>
         </div>
+
         <ul class="project-insights">
-         
-          <li>Explored a dataset containing 768 patient records and eight diagnostic features.</li>
-          <li>Standardized numerical features using StandardScaler.</li>
-          <li>Split the data into stratified training and test sets.</li>
-          <li>Achieved approximately 77.3% test accuracy.</li>
-        </ul>
-        <div class="project-links">
-      
-          <a href="https://github.com/Daliakram29/Diabetes-Prediction.git" class="btn btn-primary" target="_blank">↗ GitHub Repo</a>
-        
-          <a href="https://colab.research.google.com/drive/1Xvz5KZdzMT4uOSIimApHsboIoEhR6bV8?usp=sharing" class="btn btn-outline" target="_blank">View Notebook</a>
-        </div>
-      </div>
 
-      <div class="diabetes-visual">
-  <div class="diabetes-visual__top">
-    <span class="diabetes-visual__label">MACHINE LEARNING</span>
-    <span class="diabetes-visual__dataset">768 RECORDS</span>
-  </div>
+          <li>
+            Explored 768 patient records with eight
+            diagnostic features.
+          </li>
 
-  <div class="diabetes-visual__center">
-    <div class="accuracy-ring">
-      <div class="accuracy-ring__inner">
-        <span class="accuracy-ring__number">77.3%</span>
-        <span class="accuracy-ring__text">TEST ACCURACY</span>
-      </div>
-    </div>
+          <li>
+            Standardized numerical features using StandardScaler.
+          </li>
 
-    <div class="prediction-result">
-      <span class="prediction-result__small">MODEL OUTPUT</span>
-      <strong>DIABETES<br />PREDICTION</strong>
-    </div>
-  </div>
+          <li>
+            Used a stratified train-test split to preserve
+            class distribution.
+          </li>
 
-  <div class="diabetes-visual__metrics">
-    <div>
-      <span>MODEL</span>
-      <strong>LINEAR SVM</strong>
-    </div>
+          <li>
+            Built and evaluated a Linear SVM classification model.
+          </li>
 
-    <div>
-      <span>FEATURES</span>
-      <strong>8 CLINICAL</strong>
-    </div>
-
-    <div>
-      <span>SPLIT</span>
-      <strong>80 / 20</strong>
-    </div>
-  </div>
-
-  <div class="diabetes-visual__footer">
-    PYTHON · SCIKIT-LEARN · STANDARD SCALER
-  </div>
-</div>
-    </div>
-
-    <!-- PROJECT 2: Datathon -->
-    <div class="project-card fade-in">
-      <div class="project-info">
-        
-        <p class="project-tag">Data Cleaning & Exploratory Analysis</p>
-        <h3 class="project-title">Maternal & Child Nutrition Analysis</h3>
-        <p class="project-desc">
-          
-          A collaborative Women in Data Datathon project exploring which countries acheive better maternal and child nutrition outcomes than expected given economic and food security constraints. My contribution focused on cleaning and standardizing datasets for analysis and building a website to present the team's findings.
-        <div class="project-tools">
-          <span class="tool-tag">Python</span>
-          <span class="tool-tag">Pandas</span>
-          <span class="tool-tag">SQL</span>
-          <span class="tool-tag">BigQuery</span>
-          <span class="tool-tag">Data Cleaning</span>
-          <span class="tool-tag">Google Colab</span>
-          <span class="tool-tag">HTML/CSS</span>
-        </div>
-        <ul class="project-insights">
-          
-          <li>Cleaned nutrition, food security, and healthy diet datasets for cross-country analysis.</li>
-          <li>Standardized country identifiers, including M49 and ISO3 codes, across data sources.</li>
-          <li>Converted numeric fields into consistent formats to support reliable analysis.</li>
-          <li>Collaborated with teammates to prepare datasets for merging and further analysis.</li>
-          <li>Built and updated an HTML/CSS website presenting the team’s findings, including Uganda and Liberia.</li>
+          <li>
+            Achieved approximately 77.3% test accuracy.
+          </li>
 
         </ul>
+
         <div class="project-links">
-          
-          <a href="https://github.com/Daliakram29/NutritionPeer---Women-in-Data-Datathon-2026" class="btn btn-primary" target="_blank">↗ GitHub Repo</a>
-         
-          
+
+          <a
+            href="https://github.com/Daliakram29/Diabetes-Prediction.git"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            ↗ GitHub Repo
+          </a>
+
+          <a
+            href="https://colab.research.google.com/drive/1Xvz5KZdzMT4uOSIimApHsboIoEhR6bV8?usp=sharing"
+            class="btn btn-outline"
+            target="_blank"
+          >
+            View Notebook
+          </a>
+
         </div>
+
       </div>
+
 
       <div class="project-visual">
-        <img src="1.jpg" alt="Women in Data Datathon project cover: Why Amina's Outcome Depends on where she lives." style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
-      </div>
-    </div>
- <!-- PROJECT 3: sql -->
-    <div class="project-card fade-in">
-      <div class="project-info">
-        
-        <p class="project-tag">SQL Analysis</p>
-        <h3 class="project-title">Olist Brazilian E-commerce<br>Data Analysis</h3>
-        <p class="project-desc">
-          <!-- EDIT: project 1 description -->
-         Analysis of the Olist Brazilian E-commerce dataset using MySQL. Covers data loading, schema design, and business insights through SQL queries.
-        </p>
-        <div class="project-tools & technologies">
-          <span class="tool-tag">MySQL</span>
-          <span class="tool-tag">DDL/Schema Design</span>
-          <span class="tool-tag">Joins</span>
-          <span class="tool-tag">Window Functions</span>
-          <span class="tool-tag">Aggregate Functions</span>
+
+        <div class="diabetes-visual">
+
+          <div class="diabetes-visual__top">
+            <span class="diabetes-visual__label">
+              MACHINE LEARNING
+            </span>
+
+            <span class="diabetes-visual__dataset">
+              768 RECORDS
+            </span>
+          </div>
+
+
+          <div class="diabetes-visual__center">
+
+            <div class="accuracy-ring">
+
+              <div class="accuracy-ring__inner">
+
+                <span class="accuracy-ring__number">
+                  77.3%
+                </span>
+
+                <span class="accuracy-ring__text">
+                  TEST ACCURACY
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="prediction-result">
+
+              <span class="prediction-result__small">
+                MODEL
+              </span>
+
+              <strong>
+                LINEAR<br>
+                SVM
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="diabetes-visual__metrics">
+
+            <div>
+              <span>FEATURES</span>
+              <strong>8 CLINICAL</strong>
+            </div>
+
+            <div>
+              <span>RECORDS</span>
+              <strong>768</strong>
+            </div>
+
+            <div>
+              <span>SPLIT</span>
+              <strong>80 / 20</strong>
+            </div>
+
+          </div>
+
+
+          <div class="diabetes-visual__footer">
+            PYTHON · SCIKIT-LEARN · STANDARD SCALER
+          </div>
+
         </div>
-        <ul class="project-insights">
-          <!-- EDIT: bullet points for project 1 -->
-          <li>Calculated total platform revenue and monthly order trends to identify peak trading periods</li>
-          <li>Measured late delivery rate and order status distribution to surface fulfilment performance</li>
-          <li>Ranked top product categories and cities by order volume using RANK() window function</li>
-          <li>Identified states with revenue above average using a correlated subquery</li>
-        </ul>
-        <div class="project-links">
-          <!-- EDIT:  -->
-          <a href="https://github.com/Daliakram29/-Olist-Brazilian-E-commerce-SQL-Analysis.git"class="btn btn-primary" target="_blank">↗ GitHub Repo</a>
-          
-                 </div>
+
       </div>
 
-    <div style="background:linear-gradient(135deg,#1A1410 0%,#2D2419 100%);width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-  <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="width:90%;height:90%;">
+    </article>
 
- 
 
-    <!-- 3 metric cards -->
-    <rect x="10"  y="120" width="82" height="46" rx="2" fill="#2D2419" stroke="#C4622D" stroke-width="1"/>
-    <text x="51"  y="135" text-anchor="middle" fill="#7A7065" font-family="monospace" font-size="6" letter-spacing="1">TOTAL REVENUE</text>
-    <text x="51"  y="154" text-anchor="middle" fill="#F5F0E8" font-family="monospace" font-size="14" font-weight="bold">R$16M+</text>
+    <!--
+      05 — SIGN LANGUAGE RECOGNITION
 
-    <rect x="109" y="120" width="82" height="46" rx="2" fill="#2D2419" stroke="#3B5E4A" stroke-width="1"/>
-    <text x="150" y="135" text-anchor="middle" fill="#7A7065" font-family="monospace" font-size="6" letter-spacing="1">ORDERS</text>
-    <text x="150" y="154" text-anchor="middle" fill="#F5F0E8" font-family="monospace" font-size="14" font-weight="bold">99K+</text>
+    -->
 
-    <rect x="208" y="120" width="82" height="46" rx="2" fill="#2D2419" stroke="#7A7065" stroke-width="1"/>
-    <text x="249" y="135" text-anchor="middle" fill="#7A7065" font-family="monospace" font-size="6" letter-spacing="1">LATE DELIVERY</text>
-    <text x="249" y="154" text-anchor="middle" fill="#C4622D" font-family="monospace" font-size="14" font-weight="bold">~8%</text>
 
-    <!-- bottom label -->
-    <text x="150" y="185" text-anchor="middle" fill="#7A7065" font-family="monospace" font-size="6" letter-spacing="1">MYSQL · 5 TABLES · WINDOW FUNCTIONS</text>
-
-  </svg>
-</div>
   </div>
-   <!-- PROJECT 4: Dashboard -->
-    <div class="project-card fade-in">
-      <div class="project-info">
-        
-        <p class="project-tag">BashBoard</p>
-        <h3 class="project-title">sales performance decisions</h3>
-        <p class="project-desc">
-          <!-- EDIT: project 2 description -->
-          Interactive Power BI dashboard analyzing sales performance, profit trends, and segment distribution across multiple countries and product lines.
-        </p>
-        <div class="project-tools & Technologies">
-          <span class="tool-tag">Power BI</span>
-          <span class="tool-tag">Data Modeling</span>
-          <span class="tool-tag">DAX</span>
-          <span class="tool-tag">Data Visualization</span>
-          <span class="tool-tag">Kaggle Dataset</span>
-          
-        </div>
-        <ul class="project-insights">
-          <!-- EDIT: bullet points for project 2 -->
-          <li>KPI overview — $118.73M Total Sales, $16.89M Total Profit, 14.23% Profit Margin, 349.46% YoY Growth</li>
-          <li>Sales analysis by country using map visualization</li>
-          <li>Interactive filters (Year, Country, Segment, Product)</li>
-          <li>Discount band analysis across customer segments</li>
-          <li>Sales breakdown by segment (Government, Enterprise, Small Business, etc.)</li>
-        </ul>
-        <div class="project-links">
-          
-          <a href="https://github.com/Daliakram29/sales-performance-decisions.git" class="btn btn-primary" target="_blank">↗ GitHub Repo</a>
-         
-        </div>
-      </div>
-
-      <div class="project-visual">
-    <img src="Dashboard.jpg" alt="Dashboard Preview" style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
-  </div>
-      </div>
-    </div> 
 
 </section>
 
