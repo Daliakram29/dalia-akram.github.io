@@ -478,506 +478,98 @@
     text-transform: uppercase;
   }
 
-  /* ── PROJECTS ── */
-  .projects-area {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-  }
-
-  .project-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    position: relative;
-  }
-
-.project-card.reverse .project-info {
-  order: 2;
-}
-
-.project-card.reverse .project-visual {
-  order: 1;
-}
-
-  .project-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    font-weight: 700;
-    color: var(--sand);
-    line-height: 1;
-    position: absolute;
-    top: -2.5rem;
-    left: -2rem;
-    z-index: 0;
-  }
-
-  .project-card:nth-child(even) .project-number { left: auto; right: -1rem; }
-
-  .project-info { position: relative; z-index: 1; }
-
-  .project-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 0.8rem;
-  }
-
-  .project-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-
-  .project-desc {
-    font-size: 0.95rem;
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-  }
-
-  .project-tools {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .tool-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
-    padding: 0.3rem 0.7rem;
-    border: 1px solid var(--sand);
-    color: var(--muted);
-    text-transform: uppercase;
-  }
-
-  .project-insights {
-    list-style: none;
-    margin-bottom: 1.8rem;
-  }
-
-  .project-insights li {
-    font-size: 0.88rem;
-    color: var(--muted);
-    padding: 0.4rem 0;
-    padding-left: 1.2rem;
-    position: relative;
-  }
-
-  .project-insights li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--rust);
-    font-size: 0.75rem;
-  }
-
-  .project-links { display: flex; gap: 0.8rem; }
-
-  /* ── PROJECT CATEGORY ── */
-
-.project-category {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  padding-top: 1rem;
-  margin-bottom: -2rem;
-}
-
-.project-category span {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  color: var(--sand);
-  line-height: 1;
-}
-
-.project-category p {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--rust);
-  margin: 0;
-}
-
-
-/* ── FEATURED DATATHON ── */
-
-.featured-project {
-  padding: 3rem;
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px solid var(--sand);
-}
-
-.project-meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.3rem;
-}
-
-.achievement-badge {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-
-  background: var(--rust);
-  color: var(--cream);
-
-  padding: 0.5rem 0.8rem;
-}
-
-.project-context {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-
-/* ── PROJECT SUMMARY ── */
-
-.project-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  border-top: 1px solid var(--sand);
-  border-bottom: 1px solid var(--sand);
-
-  margin: 1.8rem 0;
-}
-
-.project-summary-grid div {
-  padding: 1rem;
-}
-
-.project-summary-grid div:not(:last-child) {
-  border-right: 1px solid var(--sand);
-}
-
-.project-summary-grid span {
-  display: block;
-
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.15em;
-
-  color: var(--muted);
-  margin-bottom: 0.45rem;
-}
-
-.project-summary-grid strong {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-
-/* ── CONTRIBUTION BLOCK ── */
-
-.contribution-block {
-  margin-top: 1.5rem;
-}
-
-.mini-heading {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.64rem;
-
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-
-  color: var(--rust);
-  margin-bottom: 0.5rem;
-}
-
-
-/* ── PROJECT IMAGES ── */
-
-.project-visual img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  display: block;
-}
-
-.datathon-visual,
-.retail-visual {
-  position: relative;
-}
-
-.visual-caption {
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  display: flex;
-  justify-content: space-between;
-
-  padding: 0.8rem 1rem;
-
-  background: rgba(26, 20, 16, 0.88);
-
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-
-  letter-spacing: 0.12em;
-  color: var(--cream);
-}
-
-
-/* ── OLIST VISUAL ── */
-
-.olist-visual {
-  background:
-    linear-gradient(
-      135deg,
-      #1A1410 0%,
-      #2D2419 100%
-    );
-
-  color: var(--cream);
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
-  padding: 2.5rem;
-}
-
-.olist-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.olist-heading span {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-}
-
-.olist-heading small {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-
-  letter-spacing: 0.12em;
-  color: var(--muted);
-}
-
-.olist-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
-}
-
-.olist-metrics div {
-  border: 1px solid rgba(196, 98, 45, 0.55);
-  padding: 1rem;
-  text-align: center;
-}
-
-.olist-metrics span {
-  display: block;
-
-  font-family: 'DM Mono', monospace;
-  font-size: 0.53rem;
-
-  letter-spacing: 0.1em;
-  color: #9b9186;
-
-  margin-bottom: 0.65rem;
-}
-
-.olist-metrics strong {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-}
-
-.olist-footer {
-  font-family: 'DM Mono', monospace;
-
-  font-size: 0.55rem;
-  letter-spacing: 0.12em;
-
-  text-align: center;
-  color: #8d847a;
-}
-
-  .project-visual {
-    background: var(--sand);
-    aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* ── diabetes prediction Visual ── */
-  .diabetes-visual {
-  width: 100%;
-  min-height: 430px;
-  padding: 42px;
-  background: #20201f;
-  color: #f3efe7;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.diabetes-visual__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  color: #b8b1a5;
-}
-
-.diabetes-visual__label {
-  color: #bd6845;
-}
-
-.diabetes-visual__center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 55px;
-  padding: 40px 0;
-}
-
-.accuracy-ring {
-  width: 155px;
-  height: 155px;
-  border-radius: 50%;
-  background:
-    conic-gradient(
-      #bd6845 0deg 278deg,
-      #5f5b55 278deg 360deg
-    );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.accuracy-ring__inner {
-  width: 118px;
-  height: 118px;
-  border-radius: 50%;
-  background: #20201f;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.accuracy-ring__number {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
-}
-
-.accuracy-ring__text {
-  margin-top: 5px;
-  font-size: 0.56rem;
-  letter-spacing: 0.14em;
-  color: #aaa49b;
-}
-
-.prediction-result {
-  max-width: 220px;
-}
-
-.prediction-result__small {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  color: #a7a097;
-}
-
-.prediction-result strong {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
-  line-height: 1.05;
-  font-weight: 500;
-}
-
-.diabetes-visual__metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid #4e4b47;
-  border-bottom: 1px solid #4e4b47;
-}
-
-.diabetes-visual__metrics div {
-  padding: 22px 18px;
-  text-align: center;
-}
-
-.diabetes-visual__metrics div:not(:last-child) {
-  border-right: 1px solid #4e4b47;
-}
-
-.diabetes-visual__metrics span {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 0.56rem;
-  letter-spacing: 0.17em;
-  color: #9d978f;
-}
-
-.diabetes-visual__metrics strong {
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-}
-
-.diabetes-visual__footer {
-  text-align: center;
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
   color: #938d85;
 }
 
+/* ── PROJECTS RESPONSIVE ── */
+@media (max-width: 950px) {
+  .project-card,
+  .featured-project {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .project-card.reverse .project-info,
+  .project-card.reverse .project-visual {
+    order: initial;
+  }
+
+  .featured-project {
+    padding: 2rem;
+  }
+
+  .project-visual,
+  .datathon-visual,
+  .retail-visual,
+  .olist-visual,
+  .diabetes-visual {
+    min-height: 390px;
+  }
+}
+
 @media (max-width: 700px) {
+  .projects-area {
+    gap: 4rem;
+  }
+
+  .project-category {
+    margin-bottom: -1.5rem;
+  }
+
+  .project-category span {
+    font-size: 2.2rem;
+  }
+
+  .featured-project {
+    padding: 1.35rem;
+  }
+
   .project-summary-grid {
-  grid-template-columns: 1fr;
-}
+    grid-template-columns: 1fr;
+  }
 
-.project-summary-grid div:not(:last-child) {
-  border-right: none;
-  border-bottom: 1px solid var(--sand);
-}
+  .project-summary-grid div:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--sand);
+  }
 
-.featured-project {
-  padding: 1.5rem;
-}
+  .visual-caption {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 
-.olist-metrics {
-  grid-template-columns: 1fr;
-}
+  .retail-visual,
+  .olist-visual {
+    min-height: auto;
+    padding: 1.7rem;
+  }
 
-.olist-heading {
-  flex-direction: column;
-  gap: 0.5rem;
-}
+  .retail-visual__top,
+  .olist-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 
-.visual-caption {
-  flex-direction: column;
-  gap: 0.3rem;
-}
+  .olist-heading small {
+    text-align: left;
+  }
+
+  .retail-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .retail-flow__item:nth-child(2) {
+    border-right: none;
+  }
+
+  .retail-flow__item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(245, 240, 232, 0.16);
+  }
+
+  .olist-metrics {
+    grid-template-columns: 1fr;
+  }
+
   .diabetes-visual {
     min-height: auto;
     padding: 30px 22px;
@@ -1001,7 +593,6 @@
     border-bottom: 1px solid #4e4b47;
   }
 }
-
   /* ── Online Learning Visual ── */
   .visual-online {
     background: linear-gradient(135deg, #3B5E4A 0%, #2D4838 100%);
@@ -1387,13 +978,12 @@
             ↗ GitHub Repo
           </a>
 
-          https://www.youtube.com/watch?v=XmLjIUAc5L0&list=PLSvPZ2ClpsQuGBo2J8YSaQ_i5SiDpGrU5&index=17
-          <a
-            href="#"
-            class="btn btn-outline"
-            target="_blank"
-          >
-            View Presentation
+         <a
+    href="https://www.youtube.com/watch?v=XmLjIUAc5L0&list=PLSvPZ2ClpsQuGBo2J8YSaQ_i5SiDpGrU5&index=17"
+    class="btn btn-outline"
+    target="_blank"
+  >
+            Watch Video
           </a>
 
         </div>
@@ -1488,7 +1078,7 @@
 
         <div class="https://github.com/Daliakram29/Online-Retial-.git">
 
-          <!-- ضعي GitHub لما يكون جاهز -->
+         
           <a
             href="#"
             class="btn btn-primary"
@@ -1502,20 +1092,59 @@
       </div>
 
 
-      <div class="project-visual retail-visual">
+     <div class="project-visual retail-visual">
 
-        <!-- لاحقًا نضع صورة الـ dashboard النهائي -->
-        <img
-          src="retail-dashboard.jpg"
-          alt="Online Retail customer and sales analytics dashboard"
-        >
+  <div class="retail-visual__top">
+    <span>ONLINE RETAIL II</span>
+    <span>1M+ TRANSACTIONS</span>
+  </div>
 
-        <div class="visual-caption">
-          <span>1M+ TRANSACTIONS</span>
-          <span>RFM · CUSTOMER ANALYTICS</span>
-        </div>
+  <div class="retail-visual__main">
 
+    <p class="retail-visual__eyebrow">
+      END-TO-END ANALYTICS
+    </p>
+
+    <h4>
+      CUSTOMER &<br>
+      SALES ANALYTICS
+    </h4>
+
+    <div class="retail-flow">
+
+      <div class="retail-flow__item">
+        <span>01</span>
+        <strong>SALES</strong>
+        <small>Revenue & Orders</small>
       </div>
+
+      <div class="retail-flow__item">
+        <span>02</span>
+        <strong>CUSTOMERS</strong>
+        <small>Behavior Analysis</small>
+      </div>
+
+      <div class="retail-flow__item">
+        <span>03</span>
+        <strong>RFM</strong>
+        <small>Segmentation</small>
+      </div>
+
+      <div class="retail-flow__item">
+        <span>04</span>
+        <strong>RETURNS</strong>
+        <small>Cancellations</small>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="retail-visual__footer">
+    PYTHON · PANDAS · SQL · RFM ANALYSIS
+  </div>
+
+</div>
 
     </article>
 
@@ -1598,37 +1227,47 @@
       </div>
 
 
-      <div class="project-visual olist-visual">
+    <div class="project-visual olist-visual">
 
-        <div class="olist-heading">
-          <span>OLIST E-COMMERCE</span>
-          <small>BRAZIL · SQL ANALYSIS</small>
-        </div>
+  <div class="olist-heading">
 
-        <div class="olist-metrics">
+    <span>
+      OLIST<br>
+      E-COMMERCE
+    </span>
 
-          <div>
-            <span>TOTAL REVENUE</span>
-            <strong>R$16M+</strong>
-          </div>
+    <small>
+      BRAZIL · SQL ANALYSIS
+    </small>
 
-          <div>
-            <span>ORDERS</span>
-            <strong>99K+</strong>
-          </div>
+  </div>
 
-          <div>
-            <span>LATE DELIVERY</span>
-            <strong>~8%</strong>
-          </div>
 
-        </div>
+  <div class="olist-metrics">
 
-        <div class="olist-footer">
-          MYSQL · JOINS · WINDOW FUNCTIONS · SUBQUERIES
-        </div>
+    <div>
+      <span>TOTAL REVENUE</span>
+      <strong>R$16M+</strong>
+    </div>
 
-      </div>
+    <div>
+      <span>ORDERS</span>
+      <strong>99K+</strong>
+    </div>
+
+    <div>
+      <span>LATE DELIVERY</span>
+      <strong>~8%</strong>
+    </div>
+
+  </div>
+
+
+  <div class="olist-footer">
+    MYSQL · JOINS · CTEs · WINDOW FUNCTIONS · SUBQUERIES
+  </div>
+
+</div>
 
     </article>
 
