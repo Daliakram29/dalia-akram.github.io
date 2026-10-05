@@ -722,95 +722,26 @@
 }
 
 /* ── RETAIL ANALYTICS VISUAL ── */
+/* ── RETAIL ANALYTICS VISUAL ── */
 .retail-visual {
-  min-height: 430px;
-  padding: 2.4rem;
-  background: linear-gradient(135deg, #191411 0%, #2a211b 100%);
-  color: #f5f0e8;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-}
-
-.retail-visual__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.16em;
-  color: #9d948a;
-}
-
-.retail-visual__top span:first-child {
-  color: var(--rust);
-}
-
-.retail-visual__main {
-  padding: 2rem 0;
-}
-
-.retail-visual__eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  color: var(--rust);
-  margin: 0 0 0.8rem;
-}
-
-.retail-visual__main h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  line-height: 1.03;
-  font-weight: 500;
-  margin: 0 0 2.5rem;
-  color: #f5f0e8;
-}
-
-.retail-flow {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid rgba(245, 240, 232, 0.16);
-  border-bottom: 1px solid rgba(245, 240, 232, 0.16);
-}
-
-.retail-flow__item {
-  padding: 1.2rem 0.9rem;
-}
-
-.retail-flow__item:not(:last-child) {
-  border-right: 1px solid rgba(245, 240, 232, 0.16);
-}
-
-.retail-flow__item span {
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  background: transparent;
   display: block;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.12em;
-  color: var(--rust);
-  margin-bottom: 0.8rem;
+  overflow: hidden;
 }
 
-.retail-flow__item strong {
+.retail-visual .project-image {
+  width: 100%;
+  height: auto;
   display: block;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  color: #f5f0e8;
-  margin-bottom: 0.4rem;
-}
-
-.retail-flow__item small {
-  display: block;
-  font-size: 0.68rem;
-  line-height: 1.5;
-  color: #989087;
+  object-fit: contain;
 }
 
 .retail-visual__footer {
-  padding-top: 1rem;
+  padding: 0.8rem 1rem;
+  background: #191411;
   font-family: 'DM Mono', monospace;
   font-size: 0.55rem;
   letter-spacing: 0.16em;
