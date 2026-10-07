@@ -485,7 +485,7 @@
 .projects-area {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 0;
 }
 
 .project-card {
@@ -494,9 +494,8 @@
   gap: 4rem;
   align-items: center;
   position: relative;
+  margin-bottom: 6rem;
   
-  padding: 2rem 0 4rem;
-  min-height: 560px;
 }
 
 .project-card.reverse .project-info {
@@ -583,7 +582,6 @@
 
 .project-visual {
   width: 100%;
-  min-height: 430px;
   background: var(--sand);
   display: flex;
   align-items: center;
@@ -598,10 +596,13 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding-top: 2rem;
-  margin-bottom: 2ز5rem;
+  padding-top: 0;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
 }
-
+.project-category:first-child {
+  margin-top: 0;
+}
 .project-category span {
   font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
