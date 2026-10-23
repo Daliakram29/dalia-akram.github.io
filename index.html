@@ -1793,8 +1793,7 @@ Right now, I’m focused on gaining practical experience in Data Analytics and l
         </h3>
 
         <p class="project-desc">
-          A binary classification project using patient health measurements
-  to predict whether a person is likely to have diabetes.
+          An independent healthcare data analysis project exploring diabetes-related health measurements, data-quality issues, and machine-learning classification. Three models were compared using cross-validation, with a focus on interpreting results and understanding prediction limitations.
         </p>
 
         <div class="project-summary-grid">
@@ -1811,7 +1810,7 @@ Right now, I’m focused on gaining practical experience in Data Analytics and l
 
   <div>
     <span>RESULT</span>
-    <strong>0.843 Logistic Regression CV ROC-AUC</strong>
+    <strong>0.843 CV ROC-AUC</strong>
   </div>
 
 </div>
@@ -1827,7 +1826,7 @@ Right now, I’m focused on gaining practical experience in Data Analytics and l
         <ul class="project-insights">
 
   <li>
-    nvestigated eight medical features through exploratory data analysis, identifying potentially missing measurements and relationships with diabetes outcomes.
+    Investigated eight medical features through exploratory data analysis, identifying potentially missing measurements and relationships with diabetes outcomes.
   </li>
 
   <li>
@@ -1880,21 +1879,30 @@ Right now, I’m focused on gaining practical experience in Data Analytics and l
 
           <div class="diabetes-visual__center">
 
-            <div class="accuracy-ring">
+     <div class="accuracy-ring">
+  <div class="accuracy-ring__inner">
 
-              <div class="accuracy-ring__inner">
+    <span class="accuracy-ring__number">
+      0.843
+    </span>
 
-                <span class="accuracy-ring__number">
-                  0.843 CV ROC-AUC
-                </span>
+    <span class="accuracy-ring__text">
+      CV ROC-AUC
+    </span>
 
-                <span class="accuracy-ring__text">
-                  TEST ACCURACY
-                </span>
+  </div>
+</div>
 
-              </div>
+<div class="prediction-result">
+  <span class="prediction-result__small">
+    MODEL
+  </span>
 
-            </div>
+  <strong>
+    LOGISTIC<br>
+    REGRESSION
+  </strong>
+</div>
 
 
             <div class="prediction-result">
